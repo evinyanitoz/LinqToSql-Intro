@@ -59,8 +59,6 @@ namespace LinqToSql_Intro
                     lblSifreHata.Visible = true;
                     lblSifreHata.Text = "HATALI GİRİŞ !";
 
-
-
                 }
 
             }
@@ -70,6 +68,12 @@ namespace LinqToSql_Intro
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            KayitOl kayit=new KayitOl();
+            kayit.Show();
+        }
+
+        private void txtSifre_TextChanged(object sender, EventArgs e)
         {
 
         }

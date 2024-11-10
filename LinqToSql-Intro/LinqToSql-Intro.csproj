@@ -153,7 +153,13 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Content Include="resimler\login.jpg" />
+    <None Include="Resources\save1.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\teacher.png" />
+    <None Include="Resources\sticky-notes.png" />
+    <None Include="Resources\updated.png" />
+    <None Include="Resources\book.png" />
     <None Include="Resources\log.jpg" />
     <None Include="Resources\login.jpg" />
   </ItemGroup>

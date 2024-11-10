@@ -41,9 +41,10 @@
             // txtKul
             // 
             this.txtKul.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtKul.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtKul.Location = new System.Drawing.Point(111, 71);
             this.txtKul.Name = "txtKul";
-            this.txtKul.Size = new System.Drawing.Size(165, 20);
+            this.txtKul.Size = new System.Drawing.Size(165, 24);
             this.txtKul.TabIndex = 3;
             this.txtKul.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -75,10 +76,12 @@
             // txtSifre
             // 
             this.txtSifre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSifre.Location = new System.Drawing.Point(111, 97);
             this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(165, 20);
+            this.txtSifre.Size = new System.Drawing.Size(165, 24);
             this.txtSifre.TabIndex = 6;
+            this.txtSifre.TextChanged += new System.EventHandler(this.txtSifre_TextChanged);
             // 
             // btnGiris
             // 
