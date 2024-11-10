@@ -89,7 +89,7 @@
             this.label5.Size = new System.Drawing.Size(51, 16);
             this.label5.TabIndex = 4;
             this.label5.Text = "ŞİFRE";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+          
             // 
             // txtAd
             // 
@@ -100,7 +100,7 @@
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(263, 35);
             this.txtAd.TabIndex = 5;
-            this.txtAd.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+  
             // 
             // txtSoyad
             // 
@@ -132,7 +132,7 @@
             this.txtSifre.PasswordChar = '*';
             this.txtSifre.Size = new System.Drawing.Size(263, 35);
             this.txtSifre.TabIndex = 9;
-            this.txtSifre.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+        
             // 
             // txtSifreTekrar
             // 
@@ -227,7 +227,7 @@
             this.Name = "KayitOl";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KAYIT OLUŞTUR";
-            this.Load += new System.EventHandler(this.KayitOl_Load);
+     
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
