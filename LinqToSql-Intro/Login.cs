@@ -40,7 +40,7 @@ namespace LinqToSql_Intro
         private void button1_Click(object sender, EventArgs e)
         {
             Anasayfa anasayfa = new Anasayfa();
-            DbSinavOgrenciEntities db = new DbSinavOgrenciEntities();
+            DbSinavOgrenciEntities1 db = new DbSinavOgrenciEntities1();
             var ogrenci=db.Ogrenci.ToList();
 
 
@@ -51,7 +51,9 @@ namespace LinqToSql_Intro
 
                     anasayfa.Show();
                     anasayfa.Text += $"| Hoşgeldin {txtKul.Text}";
-                
+                    // Yeni formun açılması tamamlandıktan sonra, mevcut formu kapat
+                    this.FormClosed += (s, args) => this.Close();
+                    this.Hide();
 
                 }
                 else
@@ -71,6 +73,9 @@ namespace LinqToSql_Intro
         {
             KayitOl kayit=new KayitOl();
             kayit.Show();
+            this.FormClosed += (s, args) => this.Close();
+            this.Hide();
+
         }
 
         private void txtSifre_TextChanged(object sender, EventArgs e)

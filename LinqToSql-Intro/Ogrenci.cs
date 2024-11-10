@@ -26,7 +26,6 @@ namespace LinqToSql_Intro
         public string FOTOGRAF { get; set; }
         public string KULLANICIADI { get; set; }
         public string SIFRE { get; set; }
-        public Nullable<int> TELEFON { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Notlar> Notlar { get; set; }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="DbSinavOgrenciModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="DbSinavOgrenciModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Dersler">
           <Key>
             <PropertyRef Name="DERSID" />
@@ -35,7 +35,6 @@
           <Property Name="FOTOGRAF" Type="varchar" MaxLength="50" />
           <Property Name="KULLANICIADI" Type="varchar" MaxLength="50" />
           <Property Name="SIFRE" Type="varchar" MaxLength="50" />
-          <Property Name="TELEFON" Type="int" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -85,7 +84,8 @@
             <End Role="Notlar" EntitySet="Notlar" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DbSinavOgrenciModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -120,10 +120,19 @@
           <Property Name="AD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="SOYAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="FOTOGRAF" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Notlar" Relationship="Self.FK_Notlar_Ogrenci" FromRole="Ogrenci" ToRole="Notlar" />
           <Property Name="KULLANICIADI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="SIFRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TELEFON" Type="Int32" />
+          <NavigationProperty Name="Notlar" Relationship="Self.FK_Notlar_Ogrenci" FromRole="Ogrenci" ToRole="Notlar" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <Association Name="FK_Notlar_Dersler">
           <End Role="Dersler" Type="Self.Dersler" Multiplicity="0..1" />
@@ -149,10 +158,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DbSinavOgrenciEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DbSinavOgrenciEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Dersler" EntityType="Self.Dersler" />
           <EntitySet Name="Notlar" EntityType="Self.Notlar" />
           <EntitySet Name="Ogrenci" EntityType="Self.Ogrenci" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <AssociationSet Name="FK_Notlar_Dersler" Association="Self.FK_Notlar_Dersler">
             <End Role="Dersler" EntitySet="Dersler" />
             <End Role="Notlar" EntitySet="Notlar" />
@@ -161,24 +171,13 @@
             <End Role="Ogrenci" EntitySet="Ogrenci" />
             <End Role="Notlar" EntitySet="Notlar" />
           </AssociationSet>
-          <EntitySet Name="sysdiagrams" EntityType="DbSinavOgrenciModel.sysdiagrams" />
         </EntityContainer>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DbSinavOgrenciModelStoreContainer" CdmEntityContainer="DbSinavOgrenciEntities">
+        <EntityContainerMapping StorageEntityContainer="DbSinavOgrenciModelStoreContainer" CdmEntityContainer="DbSinavOgrenciEntities1">
           <EntitySetMapping Name="Dersler">
             <EntityTypeMapping TypeName="DbSinavOgrenciModel.Dersler">
               <MappingFragment StoreEntitySet="Dersler">
@@ -204,24 +203,23 @@
           <EntitySetMapping Name="Ogrenci">
             <EntityTypeMapping TypeName="DbSinavOgrenciModel.Ogrenci">
               <MappingFragment StoreEntitySet="Ogrenci">
-                <ScalarProperty Name="TELEFON" ColumnName="TELEFON" />
-                <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
-                <ScalarProperty Name="KULLANICIADI" ColumnName="KULLANICIADI" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="AD" ColumnName="AD" />
                 <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
                 <ScalarProperty Name="FOTOGRAF" ColumnName="FOTOGRAF" />
+                <ScalarProperty Name="KULLANICIADI" ColumnName="KULLANICIADI" />
+                <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
             <EntityTypeMapping TypeName="DbSinavOgrenciModel.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="definition" ColumnName="definition" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
                 <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -13,10 +13,10 @@ namespace LinqToSql_Intro
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DbSinavOgrenciEntities : DbContext
+    public partial class DbSinavOgrenciEntities1 : DbContext
     {
-        public DbSinavOgrenciEntities()
-            : base("name=DbSinavOgrenciEntities")
+        public DbSinavOgrenciEntities1()
+            : base("name=DbSinavOgrenciEntities1")
         {
         }
     
