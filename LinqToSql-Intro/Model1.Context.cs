@@ -13,10 +13,10 @@ namespace LinqToSql_Intro
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DbSinavOgrenciEntities1 : DbContext
+    public partial class DbTuccoEntities : DbContext
     {
-        public DbSinavOgrenciEntities1()
-            : base("name=DbSinavOgrenciEntities1")
+        public DbTuccoEntities()
+            : base("name=DbTuccoEntities")
         {
         }
     
@@ -25,9 +25,12 @@ namespace LinqToSql_Intro
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Dersler> Dersler { get; set; }
-        public virtual DbSet<Notlar> Notlar { get; set; }
-        public virtual DbSet<Ogrenci> Ogrenci { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<APERATIF> APERATIF { get; set; }
+        public virtual DbSet<ICECEKLER> ICECEKLER { get; set; }
+        public virtual DbSet<KAHVALTI> KAHVALTI { get; set; }
+        public virtual DbSet<PERSONEL> PERSONEL { get; set; }
+        public virtual DbSet<SIPARISLER> SIPARISLER { get; set; }
+        public virtual DbSet<TATLILAR> TATLILAR { get; set; }
+        public virtual DbSet<YEMEKLER> YEMEKLER { get; set; }
     }
 }

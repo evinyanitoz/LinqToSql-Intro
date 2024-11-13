@@ -12,22 +12,12 @@ namespace LinqToSql_Intro
     using System;
     using System.Collections.Generic;
     
-    public partial class Ogrenci
+    public partial class PERSONEL
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Ogrenci()
-        {
-            this.Notlar = new HashSet<Notlar>();
-        }
-    
-        public int ID { get; set; }
-        public string AD { get; set; }
-        public string SOYAD { get; set; }
-        public string FOTOGRAF { get; set; }
+        public int PERSONELID { get; set; }
+        public string PERSONELADI { get; set; }
+        public string PERSONELSOYADI { get; set; }
         public string KULLANICIADI { get; set; }
         public string SIFRE { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Notlar> Notlar { get; set; }
     }
 }

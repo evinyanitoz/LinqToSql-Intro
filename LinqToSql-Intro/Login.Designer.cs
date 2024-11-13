@@ -79,6 +79,7 @@
             this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSifre.Location = new System.Drawing.Point(111, 97);
             this.txtSifre.Name = "txtSifre";
+            this.txtSifre.PasswordChar = '*';
             this.txtSifre.Size = new System.Drawing.Size(165, 24);
             this.txtSifre.TabIndex = 6;
             this.txtSifre.TextChanged += new System.EventHandler(this.txtSifre_TextChanged);
@@ -127,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::LinqToSql_Intro.Properties.Resources.log;
+        
             this.ClientSize = new System.Drawing.Size(298, 249);
             this.Controls.Add(this.lblSifreHata);
             this.Controls.Add(this.linkLabel1);

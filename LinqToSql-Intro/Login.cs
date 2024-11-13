@@ -39,32 +39,32 @@ namespace LinqToSql_Intro
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Anasayfa anasayfa = new Anasayfa();
-            DbSinavOgrenciEntities1 db = new DbSinavOgrenciEntities1();
-            var ogrenci=db.Ogrenci.ToList();
 
-
-            foreach (var o in ogrenci)
-            {
-                if (txtKul.Text == o.KULLANICIADI && txtSifre.Text == o.SIFRE)
-                {
+         
+           DbTuccoEntities db = new DbTuccoEntities();
+            var personel = db.PERSONEL.ToList();
+            Anasayfa anasayfa=new Anasayfa();
+           foreach (var o in personel)
+           {
+               if (txtKul.Text == o.KULLANICIADI && txtSifre.Text == o.SIFRE)
+              {
 
                     anasayfa.Show();
                     anasayfa.Text += $"| Hoşgeldin {txtKul.Text}";
-                    // Yeni formun açılması tamamlandıktan sonra, mevcut formu kapat
-                    this.FormClosed += (s, args) => this.Close();
-                    this.Hide();
+                   // Yeni formun açılması tamamlandıktan sonra, mevcut formu kapat
+                  this.FormClosed += (s, args) => this.Close();
+                  this.Hide();
 
-                }
-                else
-                {
-                    lblSifreHata.Visible = true;
-                    lblSifreHata.Text = "HATALI GİRİŞ !";
+              }
+              else
+               {
+                  lblSifreHata.Visible = true;
+                   lblSifreHata.Text = "HATALI GİRİŞ !";
 
-                }
+              }
 
-            }
-           
+          }
+
 
 
         }

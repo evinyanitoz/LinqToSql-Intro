@@ -39,7 +39,6 @@
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.txtSifreTekrar = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -61,7 +60,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(67, 169);
+            this.label2.Location = new System.Drawing.Point(68, 198);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 16);
@@ -72,7 +71,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(18, 218);
+            this.label4.Location = new System.Drawing.Point(19, 247);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(111, 16);
@@ -89,23 +88,21 @@
             this.label5.Size = new System.Drawing.Size(51, 16);
             this.label5.TabIndex = 4;
             this.label5.Text = "ŞİFRE";
-          
             // 
             // txtAd
             // 
             this.txtAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAd.Location = new System.Drawing.Point(134, 95);
+            this.txtAd.Location = new System.Drawing.Point(135, 124);
             this.txtAd.Margin = new System.Windows.Forms.Padding(4);
             this.txtAd.Multiline = true;
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(263, 35);
             this.txtAd.TabIndex = 5;
-  
             // 
             // txtSoyad
             // 
             this.txtSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSoyad.Location = new System.Drawing.Point(134, 149);
+            this.txtSoyad.Location = new System.Drawing.Point(135, 178);
             this.txtSoyad.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoyad.Multiline = true;
             this.txtSoyad.Name = "txtSoyad";
@@ -115,7 +112,7 @@
             // txtKullaniciAdi
             // 
             this.txtKullaniciAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(134, 199);
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(135, 228);
             this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(4);
             this.txtKullaniciAdi.Multiline = true;
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
@@ -125,19 +122,18 @@
             // txtSifre
             // 
             this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSifre.Location = new System.Drawing.Point(134, 253);
+            this.txtSifre.Location = new System.Drawing.Point(135, 282);
             this.txtSifre.Margin = new System.Windows.Forms.Padding(4);
             this.txtSifre.Multiline = true;
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.PasswordChar = '*';
             this.txtSifre.Size = new System.Drawing.Size(263, 35);
             this.txtSifre.TabIndex = 9;
-        
             // 
             // txtSifreTekrar
             // 
             this.txtSifreTekrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSifreTekrar.Location = new System.Drawing.Point(134, 307);
+            this.txtSifreTekrar.Location = new System.Drawing.Point(135, 336);
             this.txtSifreTekrar.Margin = new System.Windows.Forms.Padding(4);
             this.txtSifreTekrar.Multiline = true;
             this.txtSifreTekrar.Name = "txtSifreTekrar";
@@ -149,30 +145,17 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(13, 327);
+            this.label7.Location = new System.Drawing.Point(14, 356);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(116, 16);
             this.label7.TabIndex = 12;
             this.label7.Text = "ŞİFRE TEKRAR";
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.linkLabel1.Location = new System.Drawing.Point(184, 464);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(146, 16);
-            this.linkLabel1.TabIndex = 14;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "GİRİŞ EKRANINA DÖN";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
             // button1
             // 
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(134, 371);
+            this.button1.Location = new System.Drawing.Point(134, 415);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(264, 53);
@@ -183,8 +166,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::LinqToSql_Intro.Properties.Resources.save;
-            this.pictureBox1.Location = new System.Drawing.Point(147, 30);
+          
+            this.pictureBox1.Location = new System.Drawing.Point(110, 43);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 42);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -196,11 +179,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(191, 39);
+            this.label6.Location = new System.Drawing.Point(154, 52);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 24);
+            this.label6.Size = new System.Drawing.Size(244, 24);
             this.label6.TabIndex = 16;
-            this.label6.Text = "KAYIT EKRANI";
+            this.label6.Text = "PERSONEL KAYIT EKRANI";
             // 
             // KayitOl
             // 
@@ -209,7 +192,6 @@
             this.ClientSize = new System.Drawing.Size(467, 582);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtSifreTekrar);
@@ -227,7 +209,6 @@
             this.Name = "KayitOl";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KAYIT OLUŞTUR";
-     
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -247,7 +228,6 @@
         private System.Windows.Forms.TextBox txtSifreTekrar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
     }

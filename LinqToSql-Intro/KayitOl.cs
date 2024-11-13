@@ -34,21 +34,19 @@ namespace LinqToSql_Intro
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DbSinavOgrenciEntities1 db=new DbSinavOgrenciEntities1();
-            Ogrenci ogrenci;
-            db.Ogrenci.Add(new Ogrenci
-            {
+            //DbTucco db =new DbSinavOgrenciEntities1();
+            //PERSONEL ogrenci;
+            //db.Ogrenci.Add(new PERSONEL()
+            //{
 
-                AD = txtAd.Text,
-                SOYAD = txtSoyad.Text,
-                KULLANICIADI=txtKullaniciAdi.Text,
-               SIFRE=txtSifre.Text,
+            //    PERSONELADI= txtAd.Text,
+            //    PERSONELSOYADI = txtSoyad.Text,
+              
 
+            //});
 
-            });
-
-            db.SaveChanges();
-            MessageBox.Show("Kayıt Oluşturuldu");
+            //db.SaveChanges();
+            //MessageBox.Show("Kayıt Oluşturuldu");
 
 
           

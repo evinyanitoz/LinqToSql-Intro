@@ -12,12 +12,12 @@ namespace LinqToSql_Intro
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagrams
+    public partial class APERATIF
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int APERATIFIF { get; set; }
+        public string APERATIFADI { get; set; }
+        public string APERATIFICERIK { get; set; }
+        public Nullable<decimal> APERATIFIYAT { get; set; }
+        public string FOTOGRAF { get; set; }
     }
 }

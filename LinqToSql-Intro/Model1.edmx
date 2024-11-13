@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DbTuccoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="APERATIF">
+          <Key>
+            <PropertyRef Name="APERATIFIF" />
+          </Key>
+          <Property Name="APERATIFIF" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="APERATIFADI" Type="nchar" MaxLength="20" />
+          <Property Name="APERATIFICERIK" Type="nvarchar" MaxLength="50" />
+          <Property Name="APERATIFIYAT" Type="money" />
+          <Property Name="FOTOGRAF" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ICECEKLER">
+          <Key>
+            <PropertyRef Name="ICECEKLERID" />
+          </Key>
+          <Property Name="ICECEKLERID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ICECEKADI" Type="nchar" MaxLength="30" />
+          <Property Name="FOTOGRAF" Type="nvarchar" MaxLength="255" />
+          <Property Name="ICECEKFIYAT" Type="money" />
+        </EntityType>
+        <EntityType Name="KAHVALTI">
+          <Key>
+            <PropertyRef Name="KAHVALTID" />
+          </Key>
+          <Property Name="KAHVALTID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KAHVALTIADI" Type="nchar" MaxLength="30" />
+          <Property Name="KAHVALTICERIK" Type="nvarchar" MaxLength="50" />
+          <Property Name="KAHVALTIFIYAT" Type="money" />
+          <Property Name="FOROGRAF" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="PERSONEL">
+          <Key>
+            <PropertyRef Name="PERSONELID" />
+          </Key>
+          <Property Name="PERSONELID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PERSONELADI" Type="nchar" MaxLength="30" />
+          <Property Name="PERSONELSOYADI" Type="nchar" MaxLength="30" />
+          <Property Name="KULLANICIADI" Type="nchar" MaxLength="30" />
+          <Property Name="SIFRE" Type="nchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="SIPARISLER">
+          <Key>
+            <PropertyRef Name="SIPARISID" />
+          </Key>
+          <Property Name="SIPARISID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PERSONELID" Type="int" Nullable="false" />
+          <Property Name="SIPARISTARIHI" Type="datetime" Nullable="false" />
+          <Property Name="SIPARISTUTARI" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ODEMETIPI" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdatedAt" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TATLILAR">
+          <Key>
+            <PropertyRef Name="TATLID" />
+          </Key>
+          <Property Name="TATLID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TATLIADI" Type="nchar" MaxLength="30" />
+          <Property Name="TATLICERIK" Type="nvarchar" MaxLength="50" />
+          <Property Name="FOROGRAF" Type="nvarchar" MaxLength="255" />
+          <Property Name="TATLIFIYAT" Type="money" />
+        </EntityType>
+        <EntityType Name="YEMEKLER">
+          <Key>
+            <PropertyRef Name="YEMEKID" />
+          </Key>
+          <Property Name="YEMEKID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="YEMEKAD" Type="nchar" MaxLength="30" />
+          <Property Name="FOTOGRAF" Type="nvarchar" MaxLength="255" />
+          <Property Name="YEMEKICERİK" Type="nvarchar" MaxLength="50" />
+          <Property Name="YEMEKFIYAT" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="DbTuccoModelStoreContainer">
+          <EntitySet Name="APERATIF" EntityType="Self.APERATIF" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ICECEKLER" EntityType="Self.ICECEKLER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KAHVALTI" EntityType="Self.KAHVALTI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PERSONEL" EntityType="Self.PERSONEL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SIPARISLER" EntityType="Self.SIPARISLER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TATLILAR" EntityType="Self.TATLILAR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="YEMEKLER" EntityType="Self.YEMEKLER" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DbTuccoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="APERATIF">
+          <Key>
+            <PropertyRef Name="APERATIFIF" />
+          </Key>
+          <Property Name="APERATIFIF" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="APERATIFADI" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="APERATIFICERIK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="APERATIFIYAT" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="FOTOGRAF" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ICECEKLER">
+          <Key>
+            <PropertyRef Name="ICECEKLERID" />
+          </Key>
+          <Property Name="ICECEKLERID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ICECEKADI" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="FOTOGRAF" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ICECEKFIYAT" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="KAHVALTI">
+          <Key>
+            <PropertyRef Name="KAHVALTID" />
+          </Key>
+          <Property Name="KAHVALTID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KAHVALTIADI" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="KAHVALTICERIK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KAHVALTIFIYAT" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="FOROGRAF" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PERSONEL">
+          <Key>
+            <PropertyRef Name="PERSONELID" />
+          </Key>
+          <Property Name="PERSONELID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PERSONELADI" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="PERSONELSOYADI" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="KULLANICIADI" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="SIFRE" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SIPARISLER">
+          <Key>
+            <PropertyRef Name="SIPARISID" />
+          </Key>
+          <Property Name="SIPARISID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PERSONELID" Type="Int32" Nullable="false" />
+          <Property Name="SIPARISTARIHI" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SIPARISTUTARI" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ODEMETIPI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TATLILAR">
+          <Key>
+            <PropertyRef Name="TATLID" />
+          </Key>
+          <Property Name="TATLID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TATLIADI" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="TATLICERIK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FOROGRAF" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TATLIFIYAT" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="YEMEKLER">
+          <Key>
+            <PropertyRef Name="YEMEKID" />
+          </Key>
+          <Property Name="YEMEKID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="YEMEKAD" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="FOTOGRAF" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="YEMEKICERİK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="YEMEKFIYAT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="DbTuccoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="APERATIF" EntityType="Self.APERATIF" />
+          <EntitySet Name="ICECEKLER" EntityType="Self.ICECEKLER" />
+          <EntitySet Name="KAHVALTI" EntityType="Self.KAHVALTI" />
+          <EntitySet Name="PERSONEL" EntityType="Self.PERSONEL" />
+          <EntitySet Name="SIPARISLER" EntityType="Self.SIPARISLER" />
+          <EntitySet Name="TATLILAR" EntityType="Self.TATLILAR" />
+          <EntitySet Name="YEMEKLER" EntityType="Self.YEMEKLER" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DbTuccoModelStoreContainer" CdmEntityContainer="DbTuccoEntities">
+          <EntitySetMapping Name="APERATIF">
+            <EntityTypeMapping TypeName="DbTuccoModel.APERATIF">
+              <MappingFragment StoreEntitySet="APERATIF">
+                <ScalarProperty Name="APERATIFIF" ColumnName="APERATIFIF" />
+                <ScalarProperty Name="APERATIFADI" ColumnName="APERATIFADI" />
+                <ScalarProperty Name="APERATIFICERIK" ColumnName="APERATIFICERIK" />
+                <ScalarProperty Name="APERATIFIYAT" ColumnName="APERATIFIYAT" />
+                <ScalarProperty Name="FOTOGRAF" ColumnName="FOTOGRAF" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ICECEKLER">
+            <EntityTypeMapping TypeName="DbTuccoModel.ICECEKLER">
+              <MappingFragment StoreEntitySet="ICECEKLER">
+                <ScalarProperty Name="ICECEKLERID" ColumnName="ICECEKLERID" />
+                <ScalarProperty Name="ICECEKADI" ColumnName="ICECEKADI" />
+                <ScalarProperty Name="FOTOGRAF" ColumnName="FOTOGRAF" />
+                <ScalarProperty Name="ICECEKFIYAT" ColumnName="ICECEKFIYAT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KAHVALTI">
+            <EntityTypeMapping TypeName="DbTuccoModel.KAHVALTI">
+              <MappingFragment StoreEntitySet="KAHVALTI">
+                <ScalarProperty Name="KAHVALTID" ColumnName="KAHVALTID" />
+                <ScalarProperty Name="KAHVALTIADI" ColumnName="KAHVALTIADI" />
+                <ScalarProperty Name="KAHVALTICERIK" ColumnName="KAHVALTICERIK" />
+                <ScalarProperty Name="KAHVALTIFIYAT" ColumnName="KAHVALTIFIYAT" />
+                <ScalarProperty Name="FOROGRAF" ColumnName="FOROGRAF" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PERSONEL">
+            <EntityTypeMapping TypeName="DbTuccoModel.PERSONEL">
+              <MappingFragment StoreEntitySet="PERSONEL">
+                <ScalarProperty Name="PERSONELID" ColumnName="PERSONELID" />
+                <ScalarProperty Name="PERSONELADI" ColumnName="PERSONELADI" />
+                <ScalarProperty Name="PERSONELSOYADI" ColumnName="PERSONELSOYADI" />
+                <ScalarProperty Name="KULLANICIADI" ColumnName="KULLANICIADI" />
+                <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SIPARISLER">
+            <EntityTypeMapping TypeName="DbTuccoModel.SIPARISLER">
+              <MappingFragment StoreEntitySet="SIPARISLER">
+                <ScalarProperty Name="SIPARISID" ColumnName="SIPARISID" />
+                <ScalarProperty Name="PERSONELID" ColumnName="PERSONELID" />
+                <ScalarProperty Name="SIPARISTARIHI" ColumnName="SIPARISTARIHI" />
+                <ScalarProperty Name="SIPARISTUTARI" ColumnName="SIPARISTUTARI" />
+                <ScalarProperty Name="ODEMETIPI" ColumnName="ODEMETIPI" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TATLILAR">
+            <EntityTypeMapping TypeName="DbTuccoModel.TATLILAR">
+              <MappingFragment StoreEntitySet="TATLILAR">
+                <ScalarProperty Name="TATLID" ColumnName="TATLID" />
+                <ScalarProperty Name="TATLIADI" ColumnName="TATLIADI" />
+                <ScalarProperty Name="TATLICERIK" ColumnName="TATLICERIK" />
+                <ScalarProperty Name="FOROGRAF" ColumnName="FOROGRAF" />
+                <ScalarProperty Name="TATLIFIYAT" ColumnName="TATLIFIYAT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="YEMEKLER">
+            <EntityTypeMapping TypeName="DbTuccoModel.YEMEKLER">
+              <MappingFragment StoreEntitySet="YEMEKLER">
+                <ScalarProperty Name="YEMEKID" ColumnName="YEMEKID" />
+                <ScalarProperty Name="YEMEKAD" ColumnName="YEMEKAD" />
+                <ScalarProperty Name="FOTOGRAF" ColumnName="FOTOGRAF" />
+                <ScalarProperty Name="YEMEKICERİK" ColumnName="YEMEKICERİK" />
+                <ScalarProperty Name="YEMEKFIYAT" ColumnName="YEMEKFIYAT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
